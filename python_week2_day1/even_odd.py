@@ -41,7 +41,9 @@ print(only_evens([11, 20, 42, 97, 23, 10]))
 # Write a function that accepts a List of numbers as an argument.
 # Return a new List that includes the only the odd numbers.
 
-def only_odds(numbers):
+# using a `while` loop
+
+def only_odds_while(numbers):
     i = 0
     odd_numbers = []
     while i < len(numbers):
@@ -50,4 +52,15 @@ def only_odds(numbers):
         i = i + 1
     return odd_numbers
 
-print(only_odds([11, 20, 42, 97, 23, 10]))
+print(only_odd_while([11, 20, 42, 97, 23, 10]))
+
+# using a `for` loop
+
+def only_odds_for(numbers):
+    odd_numbers = []
+    for n in numbers:
+        if (n % 2) != 0:
+            odd_numbers.append(n)
+    return odd_numbers
+
+print(only_odd_for([11, 20, 42, 97, 23, 10]))
